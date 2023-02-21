@@ -1,0 +1,5 @@
+{
+    "halls": "Управление залами",
+    "error": "Ошибка авторизации!",
+    "testHall": "[draggable='true'][data-film-id='93'] > .conf-step__movie-title"
+}
