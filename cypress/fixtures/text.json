@@ -1,5 +1,6 @@
 {
     "halls": "Управление залами",
     "error": "Ошибка авторизации!",
-    "testHall": "[draggable='true'][data-film-id='93'] > .conf-step__movie-title"
+    "testHall": "[draggable='true'][data-film-id='93'] > .conf-step__movie-title",
+    "bayTestHall": "body > main > section:nth-child(2) > div.movie__info > div.movie__description > h2"
 }
