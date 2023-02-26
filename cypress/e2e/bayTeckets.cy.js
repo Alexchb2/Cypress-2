@@ -20,16 +20,16 @@ describe('Buy', () => {
     cy.visit('/admin/')
     cy.login(user.email, user.password)
     cy.get(text.testHall).then(($el) => $el.textContent).should('have.text','Логан');
-    cy.get(text.testHall).invoke('text').then((text) => {
+    cy.get(text.testHall).invoke('text').then((name) => {
       cy.visit("qamid.tmweb.ru");
       cy.get('.page-nav__day').eq(3).click() 
-      cy.get(text.bayTestHall).should('have.text', text);
+      cy.get(text.bayTestHall).should('have.text', name);
     })
     sets.forEach((current) => {
         cy.visit('/')
     
         cy.get('.page-nav__day').eq(3).click()
-        cy.get('.movie').contains('21:00').click()
+        cy.get('.movie').contains('19:00').click()
           current.data.forEach((seat) => {
             cy.get(`.buying-scheme__wrapper > :nth-child(${seat.row}) > :nth-child(${seat.seat})`).click()
           })
